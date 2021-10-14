@@ -1,0 +1,26 @@
+<label for="start">Start date:</label>
+
+<input type="datetime-local" id="time"
+       name="meeting-time" onchange="test()">
+<input type="text" id="result" readonly>
+<button onclick="myFunction()">Copy text</button>
+<script>
+	function test() {
+		var date = new Date(document.getElementById("time").value);
+		var number = Math.round(date.getTime() / 1000);
+		document.getElementById("result").value = `<t:${number}>`;
+	}
+	
+	function myFunction() {
+	  /* Get the text field */
+	  var copyText = document.getElementById("result");
+
+	  /* Select the text field */
+	  copyText.select();
+	  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+	   /* Copy the text inside the text field */
+	  navigator.clipboard.writeText(copyText.value);
+	}
+	// 
+</script>
