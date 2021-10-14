@@ -1,9 +1,9 @@
-<label for="start">Start date:</label>
+<label for="start">Select a date and press Copy, then use it in Discord</label>
 
 <input type="datetime-local" id="time"
        name="meeting-time" onchange="test()">
 <input type="text" id="result" readonly>
-<button onclick="myFunction()">Copy text</button>
+<button onclick="myFunction()">Copy</button>
 <script>
 	function test() {
 		var date = new Date(document.getElementById("time").value);
